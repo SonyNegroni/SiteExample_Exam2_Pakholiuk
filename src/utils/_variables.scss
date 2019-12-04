@@ -1,0 +1,63 @@
+// Fonts
+$dosis: 'Dosis', sans-serif;
+$opensans: 'Open Sans', sans-serif;
+
+// Colors
+$colors: (
+    colorBlack: #000,
+    colorBlueCerulean: #2265b3,
+    colorBlueCornflowerPale: #bd9df2,
+    colorBlueCornflower: #4d95e7,
+    colorBlueCurious: #3277c6,
+    colorBlueDanube: #5d99c3,
+    colorBlueDenim: #1b77df,
+    colorBlueLavender: #cee4fd,
+    colorBlueMariner: #4463a6,
+    colorBlueMaya: #6db0fb,
+    colorBluePearlBlack: #1c252d,
+    colorBlueSkyLight: #8fbff6,
+    colorBlueSlateMedium: #b483ee,
+    colorBlueSolitude: #e6e9ec,
+    colorBrownBeaver: #8f7260,
+    colorBrownSiennaBurnt: #ea6e54,
+    colorBrownSorrell: #9c7962,
+    colorBrownTemptress: #3d2625,
+    colorBrownToast: #9d765c,
+    colorBrownWoodMedium: #ab7d5d,
+    colorGreyConcord: #807c77,
+    colorGreyDim: #636363,
+    colorGreyEclipse: #373737,
+    colorGreyLightVery: #cccccc,
+    colorGreyLight: #d1d1d1,
+    colorGreyNero: #252525,
+    colorGreySuva: #898989,
+    colorGreyZircon: #e7e8ea,
+    colorGrey: #7c7c7c,
+    colorOrangeCumin: #804732,
+    colorOrangePorsche: #de9361,
+    colorOrangeSerenade: #fbe3c9,
+    colorOrangeSourWhiskey: #d38856,
+    colorOrangeTanAlert: #974a2d,
+    colorRedCopper: #dc9261,
+    colorRedValencia: #d35f47,
+    colorVioletAmethyst: #9a67d3,
+    colorVioletFlowerBiloba: #ac86d6,
+    colorVioletMauve: #c9adf8,
+    colorVioletPurpleMedium: #b483ec,
+    colorVioletScampi: #7e5da6,
+    colorWhiteGainsboro: #e7e7e7,
+    colorWhiteSmoke: #ebebeb,
+    colorWhite: #fff,
+    colorYellowSolitaire: #e9d7c2,
+    colorYellowWhiteSpanish: #dcc9b4,
+    colorCurrent: currentColor
+);
+
+// Media Breakpoints
+$breakpoints: (
+    xs: 0,
+    sm: 320px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1200px
+) !default;
