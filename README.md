@@ -1,45 +1,117 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+# Git
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+DZYGGGA
+: - дві крапки
+ADD або FIX або MERGE - додавання нового, або виправлення існуючого
+:  - дві крапки + пробіл
+Name of the ticket - Назва задачі з трелло
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+## Назва гілки
+`feature/dzyggga-name of the ticket`
 
----
+## Коментар коміта
+`DZYGGGA:ADD|FIX|MERGE: Name of the ticket - Some details`
 
-## Edit a file
+## Команди Git
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
+- *git fetch* - перевірити оновлення
+- *git pull* - підтягнути останні зміни
+- *git merge branch-name* - підтягнути зміни з іншої гілки в свою
+- *git checkout -b branch-name* - створити нову гілку
+- *git checkout branch-name* - переключитись на вже існуючу гілку
+- *git add .* - додати всі зміненні файли для подальшого коміту
+- *git push* - залити всі закомічені файли
+- *git commit -m "BR-3:ADD: Leonid Dzyhanskyi CV"* - зробити коміт
+- *git branch -d branch-name* - видалити локальну гілку
+- *git reset --hard HEAD~1* - Remove last 1 commit
+- *git stash* - приховати робочі файли не для коміта
+- *git stash pop* - Повернути приховані робочі файли
+- *git fetch -p* - Перестворити видалену гілку на Bitbucket
 
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+# HTML
 
----
+1. Для відступів вкладеності використовуємо 4 пробіла.
+```
+    <div>
+        <div>
+        </div>
+    </div>
+```
+2. Теги пишемо з нового рядка крім інлайнових тегів і тексту.
+```
+    <div>
+        <h2>
+            Title <span>name</span>
+        </h2>
+    </div>
+```
+3. Текст вкладений в блочний елемент починається з нової стрічки.
+```
+    <p>
+        Adipisicing ut et deserunt esse minim ad veniam et tempor veniam.
+    </p>
+```
+4. Після кожного елемента з класом блоку має бути пуста стрічка, якщо це не останій елемент.
+```
+    <div class="alert">
+        Adipisicing ut et deserunt esse minim ad veniam et tempor veniam.
+    </div>
 
-## Create a file
+    <div class="help-message">
+        Adipisicing ut et deserunt esse minim ad veniam et tempor veniam. Adipisicing ut et deserunt esse minim ad veniam et tempor veniam.
+    </div>
+```
+5. Для іменування класів використовуємо методологію [БЕМ](https://ru.bem.info/methodology/quick-start/)
+```
+    <div class="block block_modifier">
+        Adipisicing ut et deserunt esse minim ad veniam et tempor veniam.
 
-Next, you’ll add a new file to this repository.
+        <div class="block__element block__element_modifier">
+            Adipisicing ut et deserunt esse minim ad veniam et tempor veniam. Adipisicing ut et deserunt esse minim ad veniam et tempor veniam.
+        </div>
+    </div>
+```
 
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
+# CSS
 
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
+*CSS правила сортування:*
+1. Правила повині бути відсортовані по алфавіту.
+```
+.personal-deatails__photo {
+    background-color: currentColor;
+    border-radius: 50%;
+    border: 1px solid currentColor;
+    box-shadow: inset 0 0 0 15px #fff;
+    color: #3d6cb0;
+    display: block;
+    height: 233px;
+    margin: auto;
+    overflow: hidden;
+    padding: 15px;
+    position: relative;
+    width: 233px;
+}
 
----
+```
+2. Після закриваючої фігурної дужки має бути пуста стрічка.
+3. Кожен селектор починається з нової стрічки.
+```
+.personal-deatails__first-name,
+.personal-deatails__position {
+    ...
 
-## Clone a repository
+```
+4. Між селектором і відкриваючою фігурною дужкою має бути пробіл.
+```
+.personal-deatails__position {
+    ...
+```
 
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
+# Images
 
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
+1. Папка з зображеннями розміщується в папці *assets/images*
+2. Всі зображеннями називаються тільки латинськими літерами.
+3. Назви зображень пишуться з малої букви і слова поєднуються за допомогою дефісу.
+4. Всі зображення оптимізуємо за допомогою [TinyPng](https://tinypng.com/)
 
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+Не обов'язкові поля позначенні *.

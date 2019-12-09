@@ -1,0 +1,48 @@
+$this: ".menu";
+$item: ".menu__item";
+$link: ".menu__link";
+
+.menu {
+    color: $whiteColor;
+    font-family: 'gotham_mediumregular';
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+    }
+
+    &__item {
+        &:not(:first-child) {
+            margin-left: 68px;
+        }
+
+        &_active {
+            #{$link}:before {
+                background-color: currentColor;
+            }
+        }
+    }
+
+    &__link {
+        align-items: center;
+        color: currentColor;
+        display: flex;
+
+        &:not(:hover) {
+            text-decoration: none;
+        }
+
+        &:before {
+            border-radius: 50%;
+            box-shadow: inset 0 0 0 1px currentColor;
+            content: '';
+            display: block;
+            height: 10px;
+            margin-right: 14px;
+            width: 10px;
+        }
+    }
+}

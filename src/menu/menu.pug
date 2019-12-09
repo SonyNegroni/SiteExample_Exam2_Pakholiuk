@@ -1,0 +1,23 @@
+-
+    var
+        menuList = [
+            {
+                name: "About Us",
+                active: true
+            },
+            {
+                name: "Projects"
+            },
+            {
+                name: "News"
+            },
+            {
+                name: "Contact"
+            }
+        ]
+
+nav.menu
+    ul.menu__list
+        each item in menuList
+            li(class=`menu__item${item.active ? " menu__item_active" : ""}`)
+                a(href="#" title=`Navigate to ${item.name}` class="menu__link")=item.name

@@ -1,6 +1,4 @@
-*,
-::before,
-::after {
+* {
     box-sizing: border-box;
 }
 
@@ -9,19 +7,18 @@
 }
 
 body {
-    color: setColor();
-    font: 300 18px $opensans;
+    background-color: $grayColor;
     margin: 0;
-    padding: 0;
 }
 
-svg,
-::before,
-::after {
+.icon {
     display: inline-block;
+    height: 20px;
     vertical-align: top;
+    width: 20px;
 
-    @include setMedia(md, from) {
-        font-weight: 30;
+    &_logo {
+        width: 50px;
+        height: 29px;
     }
 }

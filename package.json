@@ -1,6 +1,6 @@
 {
-    "name": "siteexample",
-    "version": "3.0.0",
+    "name": "examples",
+    "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "dependencies": {
@@ -16,7 +16,7 @@
         "gulp-svgmin": "^2.2.0"
     },
     "scripts": {
-        "start": "gulp"
+        "start": "gulp makeSvgSprite & gulp"
     },
     "pathes": {
         "src": "src",
@@ -24,6 +24,7 @@
         "assets": "assets",
         "images": "images",
         "svg": "assets/svg",
+        "html": "**/*.html",
         "pug": "**/*.pug",
         "scss": "**/*.scss",
         "all": "**/*",
