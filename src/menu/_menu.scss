@@ -4,7 +4,6 @@ $link: ".menu__link";
 
 .menu {
     color: $whiteColor;
-    font-family: 'gotham_mediumregular';
 
     &__list {
         display: flex;
@@ -20,6 +19,9 @@ $link: ".menu__link";
         }
 
         &_active {
+            cursor: default;
+            pointer-events: none;
+
             #{$link}:before {
                 background-color: currentColor;
             }

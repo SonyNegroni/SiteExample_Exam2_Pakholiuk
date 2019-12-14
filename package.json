@@ -4,6 +4,7 @@
     "description": "",
     "main": "index.js",
     "dependencies": {
+        "font-awesome": "^4.7.0",
         "pug": "^2.0.4"
     },
     "devDependencies": {
@@ -23,7 +24,9 @@
         "dev": "dev",
         "assets": "assets",
         "images": "images",
+        "fonts": "fonts",
         "svg": "assets/svg",
+        "js": "**/*.js",
         "html": "**/*.html",
         "pug": "**/*.pug",
         "scss": "**/*.scss",

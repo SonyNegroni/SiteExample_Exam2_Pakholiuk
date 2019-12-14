@@ -56,6 +56,26 @@ function minifyImages(cb) {
     cb()
 }
 
+function compileFonts(cb) {
+    console.log('Move Fonts started!')
+    gulp.src(`${pathes.assets}/${pathes.fonts}/${pathes.all}`)
+        .pipe(gulp.dest(`${pathes.dev}/${pathes.fonts}`))
+
+    console.log('Fonts moved!')
+
+    cb()
+}
+
+function compileJS(cb) {
+    console.log('Move JS started!')
+    gulp.src(`${pathes.src}/${pathes.js}`)
+        .pipe(gulp.dest(`${pathes.dev}`))
+
+    console.log('JS moved!')
+
+    cb()
+}
+
 function makeSvgSprite(cb) {
     console.log('SVG Sprite compile started!')
 
@@ -86,7 +106,9 @@ function watchFiles(cb) {
     gulp.watch(`${pathes.src}/${pathes.html}`, moveHTML)
     gulp.watch(`${pathes.src}/${pathes.pug}`, compilePug)
     gulp.watch(`${pathes.src}/${pathes.scss}`, compileScss)
+    gulp.watch(`${pathes.src}/${pathes.js}`, compileJS)
     gulp.watch(`${pathes.assets}/${pathes.images}/${pathes.all}`, minifyImages)
+    gulp.watch(`${pathes.assets}/${pathes.fonts}/${pathes.all}`, compileFonts)
     gulp.watch(`${pathes.svg}/${pathes.sprite}`, makeSvgSprite)
 
     console.log('Watch started!')
@@ -94,8 +116,10 @@ function watchFiles(cb) {
     cb()
 }
 
-const build = series(makeSvgSprite, minifyImages, parallel(compilePug, compileScss, moveHTML, watchFiles))
+const build = series(makeSvgSprite, minifyImages, compileFonts, parallel(compilePug, compileScss, moveHTML, compileJS, watchFiles))
 
+exports.compileJS = compileJS
+exports.compileFonts = compileFonts
 exports.moveHTML = moveHTML
 exports.compilePug = compilePug
 exports.compileScss = compileScss

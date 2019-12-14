@@ -1,23 +1,12 @@
-// Colors
-@function setColor($color: map-get($colors, 'colorGreyDim')) {
-    @return $color;
-}
+@mixin addFont($fontname) {
+    @font-face {
+        font-family: $fontname;
+        src: url('fonts/#{$fontname}/#{$fontname}.eot');
+        src: url('fonts/#{$fontname}/#{$fontname}.eot?#iefix') format('embedded-opentype'),
+             url('fonts/#{$fontname}/#{$fontname}.woff') format('woff'),
+             url('fonts/#{$fontname}/#{$fontname}.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
 
-// Media Breakpoints
-@mixin setMedia($breakpoint, $dist: to) {
-    @if $dist == to {
-        @media only screen and (max-width: map-get($breakpoints, $breakpoint) - 1px) {
-            @content;
-        }
-    } @else if $dist == from {
-        @media only screen and (min-width: map-get($breakpoints, $breakpoint)) {
-            @content;
-        }
-     } @else if $dist == xs or $dist == sm or $dist == md $dist == lg $dist == xl {
-        @media only screen and (min-width:  map-get($breakpoints, $breakpoint)) and (max-width:  map-get($breakpoints, $dist) - 1px) {
-            @content;
-        }
-    } @else {
-        @error "Unknown Media Breakpoints"
     }
 }
