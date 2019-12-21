@@ -3,11 +3,15 @@ const
     gulp = require('gulp'),
     {series, parallel} = require('gulp'),
     pug = require('gulp-pug')
-    sass = require('gulp-sass')
+    sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
+    autoprefixer = require('gulp-autoprefixer'),
     plumber = require('gulp-plumber'),
     rename = require("gulp-rename"),
     svgSymbols = require('gulp-svg-symbols'),
-    svgmin = require('gulp-svgmin')
+    svgmin = require('gulp-svgmin'),
+    webpack = require('webpack-stream'),
+    webpackConfig = require('./webpack.config.js')
 
 function compilePug(cb) {
     console.log('Pug compile started!')
@@ -27,10 +31,21 @@ function compileScss(cb) {
     console.log('SCSS compile started!')
 
     gulp.src(`${pathes.src}/${pathes.scss}`)
+        .pipe(sourcemaps.init())
         .pipe(plumber())
+        .pipe(sass({
+            outputStyle: 'expanded'
+        }))
+        .pipe(autoprefixer())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(pathes.dev))
         .pipe(sass({
             outputStyle: 'compressed'
         }))
+        .pipe(rename({
+            suffix: ".min"
+        }))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(pathes.dev))
 
     console.log('SCSS compiled!')
@@ -66,6 +81,17 @@ function compileFonts(cb) {
     cb()
 }
 
+function compileJSNext(cb) {
+    console.log('Move JSNext started!')
+    gulp.src(`${pathes.src}/${pathes.js}`)
+        .pipe(webpack(webpackConfig))
+        .pipe(gulp.dest(`${pathes.dev}`))
+
+    console.log('JSNext moved!')
+
+    cb()
+}
+
 function compileJS(cb) {
     console.log('Move JS started!')
     gulp.src(`${pathes.src}/${pathes.js}`)
@@ -95,7 +121,7 @@ function makeSvgSprite(cb) {
             basename: "sprite",
             extname: ".html"
         }))
-        .pipe(gulp.dest(`${pathes.src}`))
+        .pipe(gulp.dest(`${pathes.src}/${pathes.utils}`))
 
     console.log('SVG Sprite compiled!')
 
@@ -106,6 +132,7 @@ function watchFiles(cb) {
     gulp.watch(`${pathes.src}/${pathes.html}`, moveHTML)
     gulp.watch(`${pathes.src}/${pathes.pug}`, compilePug)
     gulp.watch(`${pathes.src}/${pathes.scss}`, compileScss)
+    gulp.watch(`${pathes.src}/${pathes.js}`, compileJSNext)
     gulp.watch(`${pathes.src}/${pathes.js}`, compileJS)
     gulp.watch(`${pathes.assets}/${pathes.images}/${pathes.all}`, minifyImages)
     gulp.watch(`${pathes.assets}/${pathes.fonts}/${pathes.all}`, compileFonts)
@@ -116,9 +143,10 @@ function watchFiles(cb) {
     cb()
 }
 
-const build = series(makeSvgSprite, minifyImages, compileFonts, parallel(compilePug, compileScss, moveHTML, compileJS, watchFiles))
+const build = series(makeSvgSprite, minifyImages, compileFonts, parallel(compilePug, compileScss, moveHTML, compileJSNext, compileJS, watchFiles))
 
-exports.compileJS = compileJS
+exports.compileJSNext = compileJSNext
+exports.compileJSNext = compileJS
 exports.compileFonts = compileFonts
 exports.moveHTML = moveHTML
 exports.compilePug = compilePug

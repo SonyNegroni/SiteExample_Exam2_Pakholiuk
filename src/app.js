@@ -1,1 +1,3 @@
-import {menu} from 'menu/menu.js'
+import { taskAddClass } from "./taskAddClass/taskAddClass.js"
+
+taskAddClass.init();
