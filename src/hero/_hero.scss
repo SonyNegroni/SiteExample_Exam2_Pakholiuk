@@ -1,0 +1,138 @@
+#hero {
+    .slider-content{
+    margin: auto;
+
+}
+.content {
+    background: url("../images/bg-layer-hero.png") top center, url("https://via.placeholder.com/1500x800/7e5efb/?text=Monticello");
+    @include vp-background-size(cover);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    min-height: 800px;
+}
+
+.first {
+    background: url("../images/bg-layer-hero.png") top center, url("../images/Bg.png");
+    @include vp-background-size(cover);
+}
+
+.cover {
+    width: 100%;
+    min-height: 800px;
+    height: 800px;
+    background: transparent;
+    display: none;
+}
+
+.hero__title {
+    color: #ffffff;
+    font-family: 'Gotham Bold';
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 80px;
+    text-transform: uppercase;
+    min-height: 80px;
+    padding-bottom: 40px;
+
+    @include landscape {
+        font-size: 60px;
+        line-height: 60px;
+    }
+
+    @include mobile {
+        font-size: 60px;
+        line-height: 60px;
+    }
+}
+
+.hero__desc {
+    color: #ffffff;
+    font-family: "Gotham";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    text-transform: uppercase;
+    padding-bottom: 50px;
+}
+
+.rel {
+    position: relative;
+    padding: 0;
+}
+
+.slick-current .cover{
+    display: block;
+}
+
+.vertical-dots {
+    right:10px;
+    list-style: none;
+    display: block;
+    position: absolute;
+    top: 40%;
+    margin-top: -10px;
+    text-align: right;
+    height: 200px;
+    @include vp-flexbox;
+    @include vp-flex-direction(column);
+    @include vp-justify-content(space-between);
+}
+.vertical-dots li
+{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.vertical-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 9px;
+    height: 9px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+}
+.vertical-dots li button:hover,
+.vertical-dots li button:focus
+{
+    outline: none;
+    background-color: #ffffff;
+}
+.vertical-dots li button:hover:before,
+.vertical-dots li button:focus:before
+{
+    opacity: 1;
+
+}
+.vertical-dots li button:before
+{
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    opacity: .25;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+    .vertical-dots li.slick-active button:before {
+        opacity: .75;
+        color: #ffffff;
+    }
+}
+
+.slick-active button {
+    background-color: #ffffff !important;
+}

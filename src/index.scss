@@ -1,0 +1,46 @@
+@import '../node_modules/sass-autoprefixer/scss/prefixes.scss';
+@import 'utils/mixins.scss';
+
+
+
+@import 'header/header.scss';
+@import 'hero/hero.scss';
+@import 'works/works.scss';
+@import 'news/news.scss';
+@import 'gallery/gallery.scss';
+@import 'contact/contact.scss';
+@import 'footer/footer.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/GothamPro.eot');
+    src: url('../fonts/GothamPro.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GothamPro.woff') format('woff'),
+    url('../fonts/GothamPro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'Gotham Medium';
+    src: url('../fonts/GothamPro-Medium.eot');
+    src: url('../fonts/GothamPro-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GothamPro-Medium.woff') format('woff'),
+    url('../fonts/GothamPro-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Bold';
+    src: url('../fonts/GothamPro-Bold.eot');
+    src: url('../fonts/GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GothamPro-Bold.woff') format('woff'),
+    url('../fonts/GothamPro-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

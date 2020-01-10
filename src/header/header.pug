@@ -1,4 +1,38 @@
-header.header
-  .header_title
-    h1.header_title-main Simple & Modern
-    h2.header_title-sub we make the world's beautiful every day
+header#header
+  .header__container.container-fluid.d-flex.align-items-center.justify-content-between.fixed-top
+    .container
+      nav.navbar.navbar-expand-sm.navbar-toggleable-sm.flex-sm-wrap.justify-content-sm-center
+        a.navbar-brand(href='#')
+          picture
+            source(media='(max-width: 420px)', srcset='images/Logo-mini.png')
+            img(src='images/Logo.png')
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarMenu', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon(style='color:#ffffff; font-size: 30px;')
+            i.fa.fa-bars
+        #navbarMenu.collapse.navbar-collapse.flex-xl-row.flex-sm-column.justify-content-between
+          ul.navbar-nav.d-flex.justify-content-between.ml-5
+            li.nav-item.d-flex.align-items-center
+              .nav-link__circle
+              a.nav-link.anchor(href='#hero') About Us
+            li.nav-item.d-flex.align-items-center
+              .nav-link__circle
+              a.nav-link.anchor(href='#works') Projects
+            li.nav-item.d-flex.align-items-center
+              .nav-link__circle
+              a.nav-link.anchor(href='#news') News
+            li.nav-item.d-flex.align-items-center
+              .nav-link__circle
+              a.nav-link.anchor(href='#contacts') Contacts
+          .nav-social-container.d-flex.flex-row.justify-content-around
+            .social-fb
+              .social-circle.d-flex.justify-content-center.align-items-center
+                a(href='facebook.com')
+                  i.fab.fa-facebook-f
+            .social-tw
+              .social-circle.d-flex.justify-content-center.align-items-center
+                a(href='twitter.com')
+                  i.fab.fa-twitter
+            .social-inst
+              .social-circle.d-flex.justify-content-center.align-items-center
+                a(href='instagram.com')
+                  i.fab.fa-instagram

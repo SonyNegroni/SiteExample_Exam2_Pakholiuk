@@ -5,7 +5,9 @@
     "main": "index.js",
     "dependencies": {
         "font-awesome": "^4.7.0",
-        "pug": "^2.0.4"
+        "mapbox-gl": "^1.6.1",
+        "pug": "^2.0.4",
+        "sass-autoprefixer": "^1.0.1"
     },
     "devDependencies": {
         "@babel/core": "^7.7.7",

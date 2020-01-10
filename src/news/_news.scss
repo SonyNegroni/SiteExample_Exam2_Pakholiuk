@@ -1,0 +1,205 @@
+#news {
+    min-height: 1035px;
+    height: 1035px;
+    background-color: #ffffff;
+    background: url("../images/bg-layer-news.png") bottom center no-repeat, linear-gradient(45deg, #3c7fd4 0%, #24ccfa 100%);
+
+    .news__container {
+        min-height: 700px;
+        height: 700px;
+        position: relative;
+        .row {
+            .news__hr {
+                @include sectionHr;
+            }
+            .news__title {
+                @include sectionTitle;
+            }
+        }
+        .slider-news-content-button{
+                width: 80px;
+                height: 80px;
+                border: 1px solid #ffffff;
+                border-radius: 50%;
+                position: absolute;
+                z-index: 1;
+                top: 15%;
+                left: 40%;
+                a {
+                    width: 23px;
+                    height: 23px;
+                }
+            }
+        .slick {
+            width: 100%;
+          }
+
+          .slick-wrapper {
+            width: 100%;
+          }
+        .slider-news-content {
+
+            .card {
+                border: none;
+                border-radius: 0;
+            }
+
+            .slick-dots {
+                bottom: -65px;
+            }
+
+            .slick-dots li button {
+                border: 1px solid #ffffff;
+                border-radius: 50%;
+                width: 9px;
+                height: 9px;
+                content: none;
+
+                &::before {
+                    content: none;
+                }
+            }
+
+            .card-body {
+                min-height: 285px;
+
+                .card-title {
+                    color: #2c4058;
+                    font-family: 'Gotham Bold';
+                    height: 70px;
+
+                    font-size: 22px;
+                    font-weight: 700;
+                    line-height: 34px;
+                    text-transform: uppercase;
+                    overflow: hidden;
+
+                    @include landscape {
+                        padding-bottom: 25px;
+                        font-size: 35px;
+                    }
+
+                    @include mobile {
+                        padding-bottom: 25px;
+                        font-size: 35px;
+                    }
+                }
+
+                .card-text-main {
+                    height: 55px;
+                    color: #4b5562;
+                    font-family: "Open Sans";
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 30px;
+                    overflow: hidden;
+                }
+                .card-footer-custom {
+                    margin: 0;
+                }
+                .card-footer-name {
+                    color: #2c4058;
+                    font-family: "Gotham";
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 22px;
+                    text-transform: uppercase;
+                }
+
+                .card-footer-date {
+                    color: #55b7ff;
+                    font-family: "Gotham";
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 22px;
+                }
+            }
+            .slickPrev {
+                width: 40px;
+                height: 40px;
+                border: 1px solid #ffffff;
+                border-radius: 50%;
+                opacity: 0.5;
+                @include vp-flexbox;
+                @include vp-justify-content(center);
+                position: absolute;
+                z-index: 2;
+                font-size: 14px;
+                color: #ffffff;
+                top: 50%;
+                left: -8%;
+                cursor: pointer;
+
+                @include mobile {
+                    display: none;
+                }
+
+                i {
+                    opacity: 0.5;
+                    color: #ffffff;
+
+                    &:hover {
+                       opacity: 1;
+                    }
+                }
+            }
+
+            .slickNext {
+                width: 40px;
+                height: 40px;
+                border: 1px solid #ffffff;
+                border-radius: 50%;
+                opacity: 0.5;
+                @include vp-flexbox;
+                @include vp-justify-content(center);
+                position: absolute;
+                z-index: 2;
+                font-size: 14px;
+                color: #ffffff;
+                top: 50%;
+                right: -8%;
+                cursor: pointer;
+
+                @include mobile {
+                    display: none;
+                }
+
+                @include landscape {
+                    display: none;
+                }
+
+                @include tablet {
+                    display: none;
+                }
+
+                i {
+                    opacity: 0.5;
+
+                    &:hover {
+                       opacity: 1;
+                    }
+                }
+            }
+
+            .modal {
+                height: fit-content;
+                width: fit-content;
+            }
+
+            .modal a.close-modal {
+                background-image: url("data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJ0aW1lcyIgY2xhc3M9InN2Zy1pbmxpbmUtLWZhIGZhLXRpbWVzIGZhLXctMTEiIHJvbGU9ImltZyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMzUyIDUxMiI+PHBhdGggZmlsbD0iY3VycmVudENvbG9yIiBkPSJNMjQyLjcyIDI1NmwxMDAuMDctMTAwLjA3YzEyLjI4LTEyLjI4IDEyLjI4LTMyLjE5IDAtNDQuNDhsLTIyLjI0LTIyLjI0Yy0xMi4yOC0xMi4yOC0zMi4xOS0xMi4yOC00NC40OCAwTDE3NiAxODkuMjggNzUuOTMgODkuMjFjLTEyLjI4LTEyLjI4LTMyLjE5LTEyLjI4LTQ0LjQ4IDBMOS4yMSAxMTEuNDVjLTEyLjI4IDEyLjI4LTEyLjI4IDMyLjE5IDAgNDQuNDhMMTA5LjI4IDI1NiA5LjIxIDM1Ni4wN2MtMTIuMjggMTIuMjgtMTIuMjggMzIuMTkgMCA0NC40OGwyMi4yNCAyMi4yNGMxMi4yOCAxMi4yOCAzMi4yIDEyLjI4IDQ0LjQ4IDBMMTc2IDMyMi43MmwxMDAuMDcgMTAwLjA3YzEyLjI4IDEyLjI4IDMyLjIgMTIuMjggNDQuNDggMGwyMi4yNC0yMi4yNGMxMi4yOC0xMi4yOCAxMi4yOC0zMi4xOSAwLTQ0LjQ4TDI0Mi43MiAyNTZ6Ij48L3BhdGg+PC9zdmc+") !important;
+                top: 0.5px;
+                right: 1.5px;
+                width: 20px;
+                height: 20px;
+            }
+
+
+            .fixed-top.scrolled {
+                background-color: rgba(220,220,220,0.5) !important;
+                transition: background-color 200ms linear;
+              }
+
+        }
+    }
+}

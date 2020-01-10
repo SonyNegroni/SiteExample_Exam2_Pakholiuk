@@ -1,14 +1,55 @@
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        link(rel="stylesheet", href="style.min.css")
-        title Incognito
-        script(src="utils/jquery.min.js" defer)
-        script(src="app.min.js")
-    body
-        include taskAddClass/taskAddClass
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title MONTICELLO IG
+    // bootstrap
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh', crossorigin='anonymous')
+    // <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    // fontawesome
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.7.0/css/all.css', integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ', crossorigin='anonymous')
+    // slick slider
+    link(rel='stylesheet', href='css/slick.css')
+    link(rel='stylesheet', href='css/slick-theme.css')
+    // jquery-modal
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css')
+    // <link rel="stylesheet" href="node_modules\jquery-modal\jquery.modal.min.css">
+    // leafletmaps
+    link(rel='stylesheet', href='https://unpkg.com/leaflet@1.6.0/dist/leaflet.css', integrity='sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==', crossorigin='')
+    // plugins leaflet
+    link(rel='stylesheet', href='https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css')
+    link(rel='stylesheet', href='https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans&display=swap', rel='stylesheet')
+    link(rel='shortcut icon', href='images/favicon.ico')
+    link(rel='stylesheet', href='normalize.css')
+    link(rel='stylesheet', href='index.css')
+  body
 
-        include utils/sprite.html
+include header/header
+include hero/hero
+include works/works
+include news/news
+include gallery/gallery
+include contact/contact
+include footer/footer
+
+    // jquery
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+    // <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    // bootstrap
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6', crossorigin='anonymous')
+    // <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    // jquery-modal
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js')
+    // <script src="node_modules\jquery-modal\jquery.modal.min.js"></script>
+    // slick slider
+    script(type='text/javascript', src='slick/slick.min.js')
+    // leaflet maps
+    script(src='https://unpkg.com/leaflet@1.6.0/dist/leaflet.js', integrity='sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==', crossorigin='')
+    // leaflet plugins
+    script(src='https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js')
+    script(src='https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js')
+    script(src='index.min.js')
+    script(src='maps.js')

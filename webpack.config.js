@@ -3,10 +3,10 @@ const webpack = require("webpack");
 const webpack_rules = [];
 const webpackOption = {
     mode: 'production',
-    entry: "./src/app.js",
+    entry: "./src/index.js",
     output: {
         path: path.resolve(__dirname, "dev"),
-        filename: "app.min.js",
+        filename: "index.min.js",
     },
     module: {
         rules: webpack_rules

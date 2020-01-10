@@ -1,12 +1,91 @@
-@mixin addFont($fontname) {
-    @font-face {
-        font-family: $fontname;
-        src: url('fonts/#{$fontname}/#{$fontname}.eot');
-        src: url('fonts/#{$fontname}/#{$fontname}.eot?#iefix') format('embedded-opentype'),
-             url('fonts/#{$fontname}/#{$fontname}.woff') format('woff'),
-             url('fonts/#{$fontname}/#{$fontname}.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
-
+@mixin mobile {
+    @media (max-width: 575.98px) {
+        @content;
     }
+}
+
+@mixin landscape {
+    @media (max-width: 767.98px) {
+        @content;
+    }
+}
+
+@mixin special {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 991.98px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin xl-desktop {
+    @media (min-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin sectionHr {
+    border-bottom: 1px solid #ffffff;
+    width: 70px;
+}
+
+@mixin sectionTitle {
+    color: #ffffff;
+    font-family: 'Gotham Medium';
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 55px;
+    text-transform: uppercase;
+    padding-top: 30px;
+    padding-bottom: 70px;
+} 
+
+@mixin universal {
+    width: 140px;
+    height: 50px;
+    border: 1px solid #2c4058;
+    background: transparent;
+    color: #2c4058;
+    font-family: "Gotham";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-transform: uppercase;
+
+    &:hover {
+        background: #2c4058;
+        color: #ffffff;
+    }
+
+    &:focus {
+        background: #2c4058;
+        color: #ffffff;
+    }
+}
+
+@mixin placeholderStyle {
+    opacity: 1;
+    color: #4b5562;
+    font-family: "Gotham";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+
 }
