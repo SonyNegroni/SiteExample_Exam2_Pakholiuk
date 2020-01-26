@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>MONTICELLO IG</title>
+        <!-- bootstrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">-->
+        <!-- fontawesome-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <!-- slick slider-->
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/slick-theme.css">
+        <!-- jquery-modal-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css">
+        <!-- <link rel="stylesheet" href="node_modules\jquery-modal\jquery.modal.min.css">-->
+        <!-- leafletmaps-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="">
+        <!-- plugins leaflet-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body></body>
+</html>
+<header id="header">
+    <div class="header__container container-fluid d-flex align-items-center justify-content-between fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm flex-sm-wrap justify-content-sm-center"><a class="navbar-brand" href="#">
+                    <picture>
+                        <source media="(max-width: 420px)" srcset="images/Logo-mini.png"><img src="images/Logo.png">
+                    </picture></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon" style="color:#ffffff; font-size: 30px;"><i class="fa fa-bars"></i></span></button>
+                <div class="collapse navbar-collapse flex-xl-row flex-sm-column justify-content-between" id="navbarMenu">
+                    <ul class="navbar-nav d-flex justify-content-between ml-5">
+                        <li class="nav-item d-flex align-items-center">
+                            <div class="nav-link__circle"></div><a class="nav-link anchor" href="#hero">About Us</a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center">
+                            <div class="nav-link__circle"></div><a class="nav-link anchor" href="#works">Projects</a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center">
+                            <div class="nav-link__circle"></div><a class="nav-link anchor" href="#news">News</a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center">
+                            <div class="nav-link__circle"></div><a class="nav-link anchor" href="#contacts">Contacts</a>
+                        </li>
+                    </ul>
+                    <div class="nav-social-container d-flex flex-row justify-content-around">
+                        <div class="social-fb">
+                            <div class="social-circle d-flex justify-content-center align-items-center"><a href="facebook.com"><i class="fab fa-facebook-f"></i></a></div>
+                        </div>
+                        <div class="social-tw">
+                            <div class="social-circle d-flex justify-content-center align-items-center"><a href="twitter.com"><i class="fab fa-twitter"></i></a></div>
+                        </div>
+                        <div class="social-inst">
+                            <div class="social-circle d-flex justify-content-center align-items-center"><a href="instagram.com"><i class="fab fa-instagram"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+<section id="hero">
+    <div class="container-fluid p-0">
+        <div class="slider-content row">
+            <div class="col-xl-12 rel">
+                <div class="content first d-flex justify-content-center">
+                    <div class="cover hero__container d-flex flex-column justify-content-center align-items-center h100 w100">
+                        <div class="row d-flex flex-column justify-content-around align-items-center w-100">
+                            <div class="hero__title text-center">Simple & modern</div>
+                        </div>
+                        <div class="row d-flex flex-column justify-content-around align-items-center w-100">
+                            <div class="hero__desc text-center">We make the world's beautiful every day</div>
+                        </div>
+                        <div class="row d-flex justify-content-around align-items-center">
+                            <div class="hero__scroll text-center col-xl-12">
+                                <div class="scroll__img" id="scroll-icon"><a class="anchor" href="#"><img src="images/scroll-icon.png" alt="arrow down"></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-12 rel">
+                <div class="content second d-flex justify-content-center"></div>
+            </div>
+            <div class="col-xl-12 rel">
+                <div class="content third d-flex justify-content-center"></div>
+            </div>
+            <div class="col-xl-12 rel">
+                <div class="content forth d-flex justify-content-center"></div>
+            </div>
+            <div class="col-xl-12 rel">
+                <div class="content fifth d-flex justify-content-center"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="works">
+    <div class="works__container container-fluid d-flex flex-column justify-content-around">
+        <div class="container">
+            <div class="row d-flex flex-column align-items-center">
+                <div class="works__hr"></div>
+                <div class="works__title">what we do</div>
+            </div>
+        </div>
+        <div class="container pb-3">
+            <div class="row works__trade">
+                <div class="works__trade-left col-xl-6 col-lg-12 pb-3"><img src="images/trade.png" alt="trade" style="box-shadow: -205px -70px #55b7ff"></div>
+                <div class="works__trade-right col-xl-5 col-lg-12 offset-xl-1 offset-lg-none d-flex flex-column justify-content-around pb-2">
+                    <div class="works__title">
+                        <div class="works__title-small">one world</div>
+                        <div class="works__title-big">Trade Center</div>
+                    </div>
+                    <div class="works__desc">
+                        Increasing prosperity in our lives can be accomplished by
+                        having
+                        the
+                        right
+                        frame of mind. The truth is, our thoughts are very powerful.
+                    </div>
+                    <div class="works__button">
+                        <button class="button-universal">more details</button>
+                    </div>
+                    <div class="works__place"><i class="fas fa-map-marker-alt"></i> New York City, United
+                                                    States
+                                                    -
+                                                    1776
+                                                    feet
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row works__commerce">
+                <div class="works__commerce-right col-xl-6 col-lg-12 d-flex flex-column justify-content-around pb-5">
+                    <div class="works__title">
+                        <div class="works__title-small">International</div>
+                        <div class="works__title-big">Commerce Centre</div>
+                    </div>
+                    <div class="works__desc">
+                        Successful businesses have many things in common, today we’ll
+                        look
+                        at the
+                        big ‘R’ of recognition and how a digital advertising network may help.
+                    </div>
+                    <div class="works__button">
+                        <button class="button-universal">more details</button>
+                    </div>
+                    <div class="works__place"><i class="fas fa-map-marker-alt"></i> Hong Kong - 1588 Feet</div>
+                </div>
+                <div class="works__commerce-left col-xl-6 col-lg-12 pb-5"><img src="images/commerce.png" alt="commerce" style="box-shadow: 120px -70px #7e5aff"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="d-flex align-items-center" id="news">
+    <div class="news__container container d-flex flex-column justify-content-center">
+        <div class="row d-flex flex-column align-items-center">
+            <div class="news__hr"></div>
+            <div class="news__title">latest news</div>
+        </div>
+        <!-- modal-->
+        <div class="modal" id="ex1">
+            <div><img src="images/lauren-mancke-60633.png" alt="modal img"></div>
+        </div>
+        <div class="slider-news-content card-deck">
+            <div class="card content-news">
+                <div class="slider-news-content-button d-flex justify-content-center align-items-center"><a href="#ex1" rel="modal:open"><img src="images/plus.png" alt="plus"></a></div><img class="card-img-top" src="images/lauren-mancke-60633.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">See The Unmatched Beauty Of The Great. Lakes.</h5>
+                    <p class="card-text card-text-main">
+                        Free directories: directories are perfect for customers that
+                        are...
+                        searching for a particular topic.
+                    </p>
+                    <div class="row card-footer-custom pt-4 d-flex align-items-center">
+                        <div class="card-footer-image pr-1"><img src="images/isaac.png" alt="isaac"></div>
+                        <div class="card-footer-text">
+                            <div class="card-footer-name">Isaac Dunn</div>
+                            <div class="card-footer-date">09 Feb 2017</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card content-news"><img class="card-img-top" src="images/matthew-hamilton-202227.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Effective Advertising Pointers.</h5>
+                    <p class="card-text card-text-main">
+                        Having a home based business is a wonderful asset to your
+                        life...
+                    </p>
+                    <div class="row card-footer-custom pt-4 d-flex align-items-center">
+                        <div class="card-footer-image pr-1"><img src="images/dominic.png" alt="dominic"></div>
+                        <div class="card-footer-text">
+                            <div class="card-footer-name">Dominic Freeman</div>
+                            <div class="card-footer-date">24 Apr 2017</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card content-news"><img class="card-img-top" src="images/joel-filipe-151690.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Hypnotize Yourself Into The Ghost.
+                        Of Christmas Future
+                    </h5>
+                    <p class="card-text card-text-main">
+                        Having a home based business is a wonderful asset to your
+                        life...
+                    </p>
+                    <div class="row card-footer-custom pt-4 d-flex align-items-center">
+                        <div class="card-footer-image pr-1"><img src="images/dominic.png" alt="dominic"></div>
+                        <div class="card-footer-text">
+                            <div class="card-footer-name">Alice Ward</div>
+                            <div class="card-footer-date">30 Dec 2017</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card content-news"><img class="card-img-top" src="images/lauren-mancke-60633.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">See The Unmatched Beauty Of The Great. Lakes.</h5>
+                    <p class="card-text card-text-main">
+                        There are many things that are important to catalog
+                        design....
+                    </p>
+                    <div class="row card-footer-custom pt-4 d-flex align-items-center">
+                        <div class="card-footer-image pr-3"><img src="images/alice.png" alt="alice"></div>
+                        <div class="card-footer-text">
+                            <div class="card-footer-name">Isaac Dunn</div>
+                            <div class="card-footer-date">09 Feb 2017</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card content-news"><img class="card-img-top" src="images/matthew-hamilton-202227.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Effective Advertising Pointers.</h5>
+                    <p class="card-text card-text-main">
+                        Having a home based business is a wonderful asset to your
+                        life...
+                    </p>
+                    <div class="row card-footer-custom pt-4 d-flex align-items-center">
+                        <div class="card-footer-image pr-1"><img src="images/dominic.png" alt="dominic"></div>
+                        <div class="card-footer-text">
+                            <div class="card-footer-name">Dominic Freeman</div>
+                            <div class="card-footer-date">24 Apr 2017</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="gallery">
+    <div class="gallery__container container">
+        <div class="row d-flex flex-column align-items-center">
+            <div class="gallery__hr"></div>
+            <div class="gallery__title">gallery</div>
+        </div>
+        <div class="row gallery-img custom-gutter no-gutters">
+            <div class="custom-pd col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 position-relative">
+                <div class="img-360 position-absolute"><img src="images/360.png" alt="360"></div><img src="images/gallery-big.png" alt="gallery-big">
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="row gallery-2-3 gallery-2-3-xs custom-gutter no-gutters special-padding" style="padding-bottom: 10px;">
+                    <div class="custom-pd col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6"><img src="images/gallery-small-1.png" alt=""></div>
+                    <div class="custom-pd col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6"><img src="images/gallery-small-2.png" alt=""></div>
+                </div>
+                <div class="row custom-gutter no-gutters">
+                    <div class="custom-pd col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6"><img src="images/gallery-small-3.png" alt=""></div>
+                    <div class="custom-pd col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6"><img src="images/gallery-small-4.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center pt-5 pb-3">
+            <button class="button-universal">see more</button>
+        </div>
+    </div>
+</section>
+<section id="contacts">
+    <div class="position-relative d-flex flex-column justify-content-center align-items-center">
+        <div id="mapid"></div>
+        <div class="contacts__frame container" style="left: 50%; top: 80%; transform: translate(-50%, -50%);">
+            <div class="row d-flex flex-column align-items-center">
+                <div class="contacts__hr"></div>
+                <div class="contacts__title">get in touch</div>
+                <div class="contacts__form row d-flex">
+                    <div class="contacts__form-left col-xl-6 col-sm-12 d-flex flex-column justify-content-between">
+                        <div class="contacts__form-left--address"><span class="contacts__icon address"><i class="fas fa-map-marker-alt"></i></span> 91 Nolan Extensions Suite 670</div>
+                        <div class="contacts__form-left--phone"><span class="contacts__icon phone"><i class="fas fa-phone"></i></span> +001 356-868-2454</div>
+                        <div class="contacts__form-left--email"><span class="contacts__icon email"><i class="fas fa-inbox"></i></span> gahuy93@gmail.com</div>
+                        <div class="contacts__form-left--time"><span class="contacts__icon time"><i class="far fa-clock"></i></span> From 07:05AM to 19:30PM</div>
+                    </div>
+                    <div class="contacts__form-right col-xl-6 col-sm-12">
+                        <form class="d-flex flex-column justify-content-between" action="#" method="get">
+                            <input class="contacts-input" type="text" required="" placeholder="Your name" minlength="3">
+                            <input class="contacts-input pt-4" type="text" required="" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$">
+                            <button class="button-universal align-self-end mt-3" name="submit" target="_blank">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer id="footer">
+    <div class="footer__container container d-flex flex-column justify-content-center align-items-around">
+        <div class="row mt-4 d-flex flex-row justify-content-between justify-content-sm-center">
+            <div class="footer__logo col-xl-6 col-md-12 col-sm-12 d-flex justify-content-center"><a class="navbar-brand" href="#"><img src="images/Logo.png"></a></div>
+            <div class="nav-social-container d-flex flex-row justify-content-center col-xl-4 col-md-12">
+                <div class="social-fb pr-3">
+                    <div class="social-circle d-flex justify-content-center align-items-center"><a href="facebook.com"><i class="fab fa-facebook-f"></i></a></div>
+                </div>
+                <div class="social-tw pr-3">
+                    <div class="social-circle d-flex justify-content-center align-items-center"><a href="twitter.com"><i class="fab fa-twitter"></i></a></div>
+                </div>
+                <div class="social-inst">
+                    <div class="social-circle d-flex justify-content-center align-items-center"><a href="instagram.com"><i class="fab fa-instagram"></i></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-3">
+            <div class="footer__copyright row d-flex justify-content-md-center">
+                <div class="footer__copyright-text col-xl-5 col-md-12">Copyrights © 2017 Monticello Group  <span style="opacity: 0.5">|</span></div>
+                <div class="footer__copyright--heart col-xl-4 col-md-12"> Made with ♥ by Ga Huy
+                    <!-- jquery-->
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                    <!-- <script src="node_modules/jquery/dist/jquery.min.js"></script>-->
+                    <!-- bootstrap-->
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+                    <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>-->
+                    <!-- jquery-modal-->
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+                    <!-- <script src="node_modules\jquery-modal\jquery.modal.min.js"></script>-->
+                    <!-- slick slider-->
+                    <script type="text/javascript" src="slick/slick.min.js"></script>
+                    <!-- leaflet maps-->
+                    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+                    <!-- leaflet plugins-->
+                    <script src="index.min.js"></script>
+                    <script src="maps.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
