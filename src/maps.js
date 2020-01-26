@@ -1,5 +1,5 @@
-let lat = 48.9226;
-let lng = 24.7111;
+let lat = 49.2331;
+let lng = 28.4682;
 let zoom = 16;
 let mymap = L.map('mapid').setView([lat - 0.002, lng + 0.001], zoom);
 
